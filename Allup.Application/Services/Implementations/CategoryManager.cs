@@ -26,16 +26,16 @@ internal class CategoryManager : ICategoryService
         throw new NotImplementedException();
     }
 
-    public async Task<List<CategoryGetViewModel>> GetAllAsync(Languages language = Languages.Azerbaijan)
+    public async Task<List<CategoryGetViewModel>> GetAllAsync(int languageId = 1)
     {
-        var categories = await _repository.GetAll(x => x.Include(x => x.CategoryDetails.Where(x => x.LanguageId == (int)language)).Include(x => x.SubCategories)).OrderByDescending(x =>x.SubCategories.Count).ToListAsync();
+        var categories = await _repository.GetAll(x => x.Include(x => x.CategoryDetails.Where(x => x.LanguageId == languageId)).Include(x => x.SubCategories)).OrderByDescending(x =>x.SubCategories.Count).ToListAsync();
 
         var viewModels = _mapper.Map<List<CategoryGetViewModel>>(categories);
 
         return viewModels;
     }
 
-    public Task<CategoryGetViewModel> GetAsync(int id, Languages languages = Languages.Azerbaijan)
+    public Task<CategoryGetViewModel> GetAsync(int id, int languageId = 1)
     {
         throw new NotImplementedException();
     }

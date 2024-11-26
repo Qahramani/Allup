@@ -14,6 +14,4 @@ public class Product : BaseEntity
     public Category? Category { get; set; }
     public List<ProductDetails> ProductDetails { get; set; } = [];
     public List<ProductImage> ProductImages { get; set; } = [];
-
-
 }

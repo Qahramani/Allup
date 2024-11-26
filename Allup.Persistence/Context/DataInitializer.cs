@@ -46,7 +46,7 @@ public class DataInitializer
 
     private async Task _createSuperAdminAsync()
     {
-        var superAdmin = _configuration.GetSection("SuperAdmin").Get<SuperAdmin>();
+        var superAdmin = _configuration.GetSection("SuperAdmin").Get<SuperAdminOptions>();
         if (superAdmin == null)
             return;
 

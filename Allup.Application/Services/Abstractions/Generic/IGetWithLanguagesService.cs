@@ -3,6 +3,6 @@
 public interface IGetWithLanguagesService<TGetViewModel>
     where TGetViewModel : IViewModel
 {
-    Task<TGetViewModel> GetAsync(int id, Languages language = Languages.Azerbaijan);
-    Task<List<TGetViewModel>> GetAllAsync(Languages language = Languages.Azerbaijan);
+    Task<TGetViewModel> GetAsync(int id, int languageId = 1);
+    Task<List<TGetViewModel>> GetAllAsync(int languageId = 1);
 }

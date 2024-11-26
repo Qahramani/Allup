@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Allup.Application.Helpers;
+using Allup.Application.Helpers.Abstractions;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.DependencyInjection;
 using System.Globalization;
@@ -26,9 +28,12 @@ public static class ApplicationServiceRegistrations
 
         services.AddScoped<ILanguageService, LanguageManager>();
         services.AddScoped<ICategoryService, CategoryManager>();
+        services.AddScoped<IProductService, ProductManager>();
 
         services.AddScoped<IHomeService, HomeManager>();
         services.AddScoped<ILayoutService, LayoutManager>();
+
+        services.AddScoped<ICloudinaryService, CloudinaryManager>();
 
         services.AddSingleton<StringLocalizerService>();
 

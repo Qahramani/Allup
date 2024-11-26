@@ -1,6 +1,4 @@
-﻿using Allup.Persistence.Context;
-using Allup.Persistence.Repositories.Abstractions;
-using Allup.Persistence.Repositories.Implementations;
+﻿using Allup.Persistence.Repositories.Implementations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

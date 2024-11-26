@@ -1,6 +1,6 @@
 ﻿namespace Allup.Domain.AppSettingsModels;
 
-public class SuperAdmin
+public class SuperAdminOptions
 {
     public string Username { get; set; } = null!;
     public string Fullname { get; set; } = null!;
