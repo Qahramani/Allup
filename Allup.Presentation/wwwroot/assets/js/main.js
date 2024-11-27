@@ -1,4 +1,52 @@
-$(function() {
+const productIdInput = document.querySelector(".product-id");
+const wishlistCard = document.querySelectorAll(".wishlistCard");
+
+//addTowishlstBtn.addEventListener('click', async (e) => {
+//    e.preventDefault();
+
+//    try {
+//        const mylink = `https://localhost:44350/wishlist/ToggleToWishlist`;
+
+//        fetch(mylink,
+//            {
+//                headers: {
+//                    'Accept': 'application/json',
+//                    'Content-Type': 'application/json'
+//                },
+//                method: "POST",
+//                body: JSON.stringify({ producti d: productIdInput.value})
+//            })
+//    } catch (e) {
+//        console.log(e);
+//    }
+
+//});
+
+wishlistCard.forEach(.addEventListener('click', (e) => {
+    if (e.target.classList.contains('product-id')) {
+        let id = e.target.getAttribute("data-id");
+        console.log(id);
+    }
+});
+
+async function DeleteBook(id) {
+    try {
+        console.log(id)
+        var response = await fetch(`https://localhost:7226/api/Books/${id}`, {
+            method: 'DELETE',
+        })
+        if (response.status == 404) {
+            alert("Book with given Id is not found");
+            return;
+        }
+
+        console.log("Book successfully deleted")
+    } catch (e) {
+        console.log(e);
+    }
+}
+
+$(function () {
     
     "use strict";
     

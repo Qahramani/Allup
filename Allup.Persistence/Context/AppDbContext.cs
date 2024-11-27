@@ -33,5 +33,6 @@ public class AppDbContext : IdentityDbContext<AppUser>
     public DbSet<SettingDetails> SettingDetails { get; set; } = null!;
     public DbSet<Service> Services { get; set; } = null!;
     public DbSet<ServiceDetails> ServiceDetails { get; set; } = null!;
+    public DbSet<WishlistItem> WishlistItems{ get; set; } = null!;
 
 }

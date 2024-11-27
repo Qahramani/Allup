@@ -1,6 +1,4 @@
-﻿using Allup.Domain.Entities;
-
-namespace Allup.Application.ViewModels;
+﻿namespace Allup.Application.ViewModels;
 
 public class ProductGetViewModel : IViewModel
 {

@@ -27,6 +27,7 @@ public static class PersistenceServiceRegistrations
         services.AddScoped<ISettingDetailsRepository, SettingDetailsRepository>();
         services.AddScoped<IServiceRepository, ServiceRepository>();
         services.AddScoped<IServiceDetailsRepository, ServiceDetailsRepository>();
+        services.AddScoped<IWishlistRepository, WishlistItemRepository>();
 
         services.AddScoped<DataInitializer>();
 

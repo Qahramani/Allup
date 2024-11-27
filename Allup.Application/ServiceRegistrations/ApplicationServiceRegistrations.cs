@@ -29,6 +29,7 @@ public static class ApplicationServiceRegistrations
         services.AddScoped<ILanguageService, LanguageManager>();
         services.AddScoped<ICategoryService, CategoryManager>();
         services.AddScoped<IProductService, ProductManager>();
+        services.AddScoped<IWishlistService, WishlistManager>();
 
         services.AddScoped<IHomeService, HomeManager>();
         services.AddScoped<ILayoutService, LayoutManager>();

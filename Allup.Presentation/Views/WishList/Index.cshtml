@@ -1,0 +1,24 @@
+﻿  @model List<WishlistItemGetViewModel>
+<!--====== Breadcrumb Part Start ======-->
+
+<div class="breadcrumb-area">
+    <div class="container-fluid custom-container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Wishlist</li>
+            </ol>
+        </nav>
+    </div> <!-- container -->
+</div>
+
+<!--====== Breadcrumb Part Ends ======-->
+<!--====== Wishlist Part Start ======-->
+
+<section class="wishlist-page pt-10">
+    <div class="container-fluid custom-container">
+        <partial name="_WishlistPartial" model="@Model"></partial>
+    </div>
+</section>
+
+<!--====== Wishlist Part Ends ======-->

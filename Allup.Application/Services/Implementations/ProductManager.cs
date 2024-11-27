@@ -27,4 +27,9 @@ internal class ProductManager : IProductService
     {
         throw new NotImplementedException();
     }
+
+    public async Task<bool> IsProductExist(int id)
+    {
+        return await _repository.IsExistAsync(x => x.Id == id);
+    }
 }
